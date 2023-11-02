@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 using LoanAccelerator.Models.DTO;
+using System.Diagnostics;
+using LoanAccelerator.Services;
 
 namespace LoanAccelerator.Controllers
 {
@@ -30,7 +32,7 @@ namespace LoanAccelerator.Controllers
         [HttpGet("address-information")]
         public async Task<ActionResult<List<Address>>> GetAddressInformation()
         {
-            try
+             try
             {
                 var item = await _address.GetAddressInformation();
                 return Ok(item);

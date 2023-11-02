@@ -1,6 +1,7 @@
 ﻿using LoanAccelerator.Interface.RepoInterface;
 using LoanAccelerator.Interface.ServiceInterface;
 using LoanAccelerator.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace LoanAccelerator.Services
 {
@@ -35,7 +36,7 @@ namespace LoanAccelerator.Services
             return result;
         }
         #endregion
-
+ 
         #region service method to retrieves a list of address information entries.
         /// <summary>
         /// Retrieves a list of address information entries.
@@ -46,7 +47,7 @@ namespace LoanAccelerator.Services
             return _repo.GetAll();
         }
         #endregion
-
+ 
         #region service method to updates an existing address information entry.
 
         /// <summary>

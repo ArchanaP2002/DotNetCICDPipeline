@@ -12,13 +12,18 @@ namespace LoanAccelerator.Controllers
     {
         private readonly ILoanService _iloan;
         private readonly ITokenService _token;
-       
+        private ILoanService @object;
 
         #region parameterized constructor
         public LoansController(ILoanService iloan, ITokenService token)
         {
             _iloan = iloan;
             _token = token;
+        }
+
+        public LoansController(ILoanService @object)
+        {
+            this.@object = @object;
         }
         #endregion
 
